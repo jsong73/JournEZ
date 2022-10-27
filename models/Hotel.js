@@ -15,11 +15,11 @@ Hotel.init(
         },
         checkin_date:{
         type: DataTypes.DATEONLY,
-        allowNull: true,    
+        allowNull: false,    
         },
         checkout_date:{
         type: DataTypes.DATEONLY,
-        allowNull: true,    
+        allowNull: false,    
         },
         room_bill:{
         type: DataTypes.DECIMAL,

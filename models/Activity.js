@@ -11,7 +11,7 @@ Activity.init(
     },
         activity_date: {
         type: DataTypes.DATEONLY,
-        allowNull: true,
+        allowNull: false,
     },
         activity_cost:{
         type: DataTypes.DECIMAL,

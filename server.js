@@ -18,7 +18,7 @@ res.send("HELLO")
 })
 
 //to connect to port using express
-sequelize.sync({force: false}).then(() => {
+sequelize.sync({force: true}).then(() => {
     app.listen(PORT, (err) => 
     console.log(`listening to port ${PORT}`));
 });

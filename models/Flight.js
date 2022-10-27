@@ -11,7 +11,7 @@ Flight.init(
         },
         flight_date:{
         type: DataTypes.DATEONLY,
-        allowNull: true,
+        allowNull: false,
         },
         flight_time:{
         type: DataTypes.TIME,
