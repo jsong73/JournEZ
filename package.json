@@ -1,0 +1,28 @@
+{
+  "name": "journez",
+  "version": "1.0.0",
+  "description": "Travel app for friends",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsong73/JournEZ.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsong73/JournEZ/issues"
+  },
+  "homepage": "https://github.com/jsong73/JournEZ#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.3"
+  }
+}
