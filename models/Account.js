@@ -38,7 +38,7 @@ Account.init(
 },
     {
         sequelize,
-        timestraps: false,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: "account",
