@@ -17,7 +17,7 @@ Flight.init(
         type: DataTypes.TIME,
         allowNull: true,
         },
-        seat_id:{
+        seat_number:{
         type: DataTypes.STRING,
         allowNull: true,
         },
