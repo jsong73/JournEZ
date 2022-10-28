@@ -1,7 +1,9 @@
 const router = require("express").Router();
-const accountRoutes = require("./accountRoutes")
+const accountRoutes = require("./accountRoutes");
+const activityRoutes = require("./activityRoutes");
 
-router.use("/api", accountRoutes);
+router.use("/api/account", accountRoutes);
+router.use("/api/activity", activityRoutes);
 
 router.get("/", async (req, res) => {
     try{
