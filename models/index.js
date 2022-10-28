@@ -8,32 +8,31 @@ const Trip = require ("./Trip");
 
 Account.hasMany(Trip, {
     foreignKey:"user_id",
-    onDelete:"CASCASE",
+    onDelete:"CASCADE",
 });
 
 Trip.belongsTo(Account, {
     foreignKey:"user_id",
-    onDelete:"CASCASE",
+    onDelete:"CASCADE",
 });
 
 Trip.hasMany(Activity, {
     foreignKey:"id",
 });
 
-Trip.belongsTo(Transportation, {
+Trip.hasMany(Transportation, {
     foreignKey:"id",
 });
 
-Trip.belongsTo(Flight, {
+Trip.hasMany(Flight, {
     foreignKey:"id",
 });
 
-Trip.belongsTo(Restaurant, {
+Trip.hasMany(Restaurant, {
     foreignKey:"id",
 });
 
-
-Trip.belongsTo(Hotel, {
+Trip.hasMany(Hotel, {
     foreignKey:"id",
 });
 
