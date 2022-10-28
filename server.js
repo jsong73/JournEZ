@@ -9,6 +9,8 @@ const Model = require("./models");
 const PORT = process.env.PORT || 3002;
 //importing controllers folder
 const controllers = require("./controllers")
+//importing path node library
+const path = require('path');
 // Import express-handlebars
 const exphbs = require("express-handlebars")
 const hbs = exphbs.create({});
@@ -22,7 +24,13 @@ app.use(express.urlencoded({extended: true}));
 
 app.use(controllers)
 
-app.use(express.static("public"));
+//NOT SURE WHY IMAGE NOT LOADING
+app.use(express.static("images"));
+app.use(express.static(path.join(__dirname, 'images')));
+
+//connecting public folder, front end to server
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 //to connect to port using express
 sequelize.sync({force: false}).then(() => {
