@@ -22,6 +22,8 @@ app.use(express.urlencoded({extended: true}));
 
 app.use(controllers)
 
+app.use(express.static("public"));
+
 //to connect to port using express
 sequelize.sync({force: false}).then(() => {
     app.listen(PORT, (err) => 
