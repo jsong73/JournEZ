@@ -6,7 +6,7 @@ router.get("/", async (req, res) => {
         const accountData = await Account.findAll();
         const serializedData = accountData.map((account) => account.get({ plain: true}));
         console.log(serializedData)
-        res.render("homepage", {serializedData})
+        res.render("signup", {serializedData})
     } catch (err) {
         res.status(400).json(err);
     }
