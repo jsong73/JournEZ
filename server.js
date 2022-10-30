@@ -24,10 +24,6 @@ app.use(express.urlencoded({extended: true}));
 
 app.use(controllers)
 
-//NOT SURE WHY IMAGE NOT LOADING
-app.use(express.static("images"));
-app.use(express.static(path.join(__dirname, 'images')));
-
 //connecting public folder, front end to server
 app.use(express.static(path.join(__dirname, 'public')));
 
