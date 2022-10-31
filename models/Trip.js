@@ -9,7 +9,7 @@ Trip.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    account_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
