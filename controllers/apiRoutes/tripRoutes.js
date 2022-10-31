@@ -9,8 +9,69 @@ const {
   Trip,
 } = require("../../models");
 
-router.get("/", (req, res) => {
-  res.send("Hello");
+// /api/trips to get ALL the information from ALL users and ALL related trip info
+router.get("/", async (req, res) => {
+  try {
+    const tripsData = await Trip.findAll({
+      include: [
+        {
+          model: Account,
+          attributes: { exclude: "password" },
+        },
+        {
+          model: Activity,
+        },
+        {
+          model: Flight,
+        },
+        {
+          model: Hotel,
+        },
+        {
+          model: Restaurant,
+        },
+        {
+          model: Transportation,
+        },
+      ],
+    });
+    const trips = tripsData.map((data) => data.get({ plain: true }));
+    res.status(200).json(trips);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/:user_id", async (req, res) => {
+  try {
+    const tripsData = await Trip.findByPk(req.params.user_id, {
+      include: [
+        {
+          model: Account,
+          attributes: { exclude: "password" },
+        },
+        {
+          model: Activity,
+        },
+        {
+          model: Flight,
+        },
+        {
+          model: Hotel,
+        },
+        {
+          model: Restaurant,
+        },
+        {
+          model: Transportation,
+        },
+      ],
+    });
+    const trips = tripsData.get({ plain: true });
+    res.status(200).json(trips);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
