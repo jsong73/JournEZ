@@ -23,6 +23,11 @@ Activity.init(
       type: DataTypes.DECIMAL(10, 2),
       allowNull: true,
     },
+    paid_in_full: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    },
   },
   {
     sequelize,

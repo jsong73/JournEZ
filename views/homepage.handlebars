@@ -9,6 +9,62 @@
     <a class="nav-link" href="#"> Past Trips </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#"> Account </a>
+    <a class="nav-link" href="/signin"> Account </a>
   </li>
 </ul>
+
+{{#each trips as |trip| }}
+<div>{{trip.trip_name}}</div>
+
+  {{#each trip.activities as |activity|}}
+  <div>{{activity.activity}}</div>
+  <div>{{activity.activity_date}}</div>
+  <div>{{activity.activity_cost}}</div>
+  {{/each}}
+
+  {{#each trip.flights as |flight|}}
+  <div>{{flight.airline}}</div>
+  <div>{{flight.flight_date}}</div>
+  <div>{{flight.flight_time}}</div>
+  <div>{{flight.seat_number}}</div>
+  <div>{{flight.flight_cost}}</div>
+  {{/each}}
+
+  {{#each trip.hotels as |hotel|}}
+  <div>{{hotel.hotel}}</div>
+  <div>{{hotel.room_number}}</div>
+  <div>{{hotel.checkin_date}}</div>
+  <div>{{hotel.checkout_date}}</div>
+  <div>{{hotel.room_bill}}</div>
+  {{/each}}
+
+  {{#each trip.restaurants as |restaurant|}}
+  <div>{{restaurant.restaurant}}</div>
+  <div>{{restaurant.dining_date}}</div>
+  <div>{{restaurant.bill_amount}}</div>
+  {{/each}}
+
+  {{#each trip.transportation as |transportation|}}
+  <div>{{transportation.transportation}}</div>
+  <div>{{transportation.ride_date}}</div>
+  <div>{{transporation.ride_cost}}</div>
+
+  {{#if transportation.paid_in_full}}
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        {{transportation.paid_in_full}}
+      </label>
+    </div>
+  {{else}}
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        {{transportation.paid_in_full}}
+      </label>
+    </div>
+  {{/if}}
+  {{/each}}
+
+
+{{/each}}

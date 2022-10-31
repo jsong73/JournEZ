@@ -23,6 +23,11 @@ Transportation.init(
       type: DataTypes.DECIMAL,
       allowNull: true,
     },
+    paid_in_full: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    },
   },
   {
     sequelize,

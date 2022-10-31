@@ -31,20 +31,21 @@ router.post("/signin", async (req, res) => {
    try{
         const accountData = await Account.findOne({
             where:{
-              username: req.params.username,  
-              password: req.params.password,
+              username: req.body.username,  
+              password: req.body.password,
             },
         });
-
         if(!accountData){
             res.status(400).json({ msg: "No account found! Please check username or password."})
             return;
         }
         res.status(200).json(accountData);
-    }catch (err) {
-        res.status(500).json(err)
+    } catch (err) {
+        res.status(400).json(err)
     }
    
 });
+
+
 
 module.exports = router;
