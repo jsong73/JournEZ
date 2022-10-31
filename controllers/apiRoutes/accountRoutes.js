@@ -5,7 +5,7 @@ router.get("/", async (req, res) => {
     try{
         const accountData = await Account.findAll();
         console.log(accountData);
-        res.status(200).json(userData)
+        res.status(200).json(accountData)
     } catch (err) {
         res.status(500).json(err);
     }
@@ -25,6 +25,26 @@ router.post("/", async (req, res) => {
     } catch(err){
         res.status(400).json(err)
     }
+});
+
+router.post("/signin", async (req, res) => {
+   try{
+        const accountData = await Account.findOne({
+            where:{
+              username: req.params.username,  
+              password: req.params.password,
+            },
+        });
+
+        if(!accountData){
+            res.status(400).json({ msg: "No account found! Please check username or password."})
+            return;
+        }
+        res.status(200).json(accountData);
+    }catch (err) {
+        res.status(500).json(err)
+    }
+   
 });
 
 module.exports = router;

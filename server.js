@@ -27,6 +27,7 @@ app.use(controllers);
 //connecting public folder, front end to server
 app.use(express.static(path.join(__dirname, "public")));
 
+
 //to connect to port using express
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, (err) => console.log(`listening to port ${PORT}`));

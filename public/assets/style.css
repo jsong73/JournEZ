@@ -12,12 +12,24 @@ button{
     margin: 0 auto;
     display: block;
     font-family: 'Courier New', Courier, monospace;
+    border: none;
+    background-color: white;
 }
 
-img{
+/* img{
     width: 200px;
-}
+} */
 
-body{
+form{
     text-align: center;
 }
+
+
+.nav-item{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-link{
+    color: black;
+}
+
