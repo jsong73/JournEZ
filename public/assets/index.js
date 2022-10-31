@@ -1,4 +1,14 @@
-const bodyEl = document.querySelector("body");
+const loginFormHandler = async (event) => {
+    event.preventDefault();
+
+    const email = docu
 
 fetch("/api/account")
-.then((res))
+.then((res) => {
+return res.json();
+})
+.then((data) => {
+console.log(data)    
+})
+
+}
