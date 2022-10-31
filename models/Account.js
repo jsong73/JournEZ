@@ -39,7 +39,7 @@ Account.init(
     },
         payment_info:{
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
 },
     {
