@@ -4,55 +4,64 @@ const Flight = require("./Flight");
 const Hotel = require("./Hotel");
 const Restaurant = require("./Restaurant");
 const Transportation = require("./Transportation");
-const Trip = require ("./Trip");
+const Trip = require("./Trip");
 
 Account.hasMany(Trip, {
-    foreignKey:"user_id",
-    onDelete:"CASCADE",
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
 });
 
 Trip.belongsTo(Account, {
-    foreignKey:"user_id",
-    onDelete:"CASCADE",
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
 });
 
 Trip.hasMany(Activity, {
-    foreignKey:"id",
+  foreignKey: "activity_id",
 });
 
 Trip.hasMany(Transportation, {
-    foreignKey:"id",
+  foreignKey: "transportation_id",
 });
 
 Trip.hasMany(Flight, {
-    foreignKey:"id",
+  foreignKey: "flight_id",
 });
 
 Trip.hasMany(Restaurant, {
-    foreignKey:"id",
+  foreignKey: "restaurant_id",
 });
 
 Trip.hasMany(Hotel, {
-    foreignKey:"id",
+  foreignKey: "hotel_id",
 });
 
 Activity.belongsTo(Trip, {
-    foreignKey:"activity_id",
+  foreignKey: "activity_id",
 });
 
 Transportation.belongsTo(Trip, {
-    foreignKey:"transportation_id",
+  foreignKey: "transportation_id",
 });
 
 Flight.belongsTo(Trip, {
-    foreignKey:"flight_id",
+  foreignKey: "flight_id",
 });
 
 Restaurant.belongsTo(Trip, {
-    foreignKey:"restaurant_id",
+  foreignKey: "restaurant_id",
 });
 
 Hotel.belongsTo(Trip, {
-    foreignKey:"hotel_id",
+  foreignKey: "hotel_id",
 });
-module.exports = { Account , Activity, Flight, Hotel, Restaurant, Transportation, Trip};
+
+module.exports = {
+  Account,
+  Activity,
+  Flight,
+  Hotel,
+  Restaurant,
+  Transportation,
+  Trip,
+};

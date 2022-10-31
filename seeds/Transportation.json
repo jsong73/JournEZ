@@ -1,0 +1,22 @@
+[
+    {
+        "transportation": "Boat",
+        "ride_date": "2022-12-30",
+        "ride_cost": 690.42
+    },
+    {
+        "transportation": "Uber",
+        "ride_date": "2022-10-15",
+        "ride_cost": 150.15
+    },
+    {
+        "transportation": "Motorcycle",
+        "ride_date": "2022-10-15",
+        "ride_cost": 15.15
+    },
+    {
+        "transportation": "Bus",
+        "ride_date": "2022-12-30",
+        "ride_cost": 5.00
+    }
+]

@@ -4,35 +4,41 @@ const sequelize = require("../config/connection");
 class Hotel extends Model {}
 
 Hotel.init(
-    {
-        hotel:{
-        type: DataTypes.STRING,
-        allowNull: false,
-        },
-        room_number:{
-        type: DataTypes.STRING,
-        allowNull: true,
-        },
-        checkin_date:{
-        type: DataTypes.DATEONLY,
-        allowNull: false,    
-        },
-        checkout_date:{
-        type: DataTypes.DATEONLY,
-        allowNull: false,    
-        },
-        room_bill:{
-        type: DataTypes.DECIMAL,
-        allowNull: true,    
-        },
+  {
+    hotel_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: "hotel",
-    }
+    hotel: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    room_number: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    checkin_date: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+    },
+    checkout_date: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+    },
+    room_bill: {
+      type: DataTypes.DECIMAL(10, 2),
+      allowNull: true,
+    },
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "hotel",
+  }
 );
 
-    module.exports = Hotel; 
+module.exports = Hotel;
