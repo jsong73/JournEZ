@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Account } = require("../models");
+const { Account } = require("../../models");
 
 router.get("/", async (req, res) => {
     try{
@@ -21,7 +21,6 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
     try{
         const accountData = await Account.create(req.body)
-        res.render("signup")
         res.status(200).json({ msg: "Account was successfully created!", accountData})
     } catch(err){
         res.status(400).json(err)
