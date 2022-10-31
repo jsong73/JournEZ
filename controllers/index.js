@@ -1,14 +1,10 @@
 const router = require("express").Router();
 const accountRoutes = require("./accountRoutes");
+const apiRoutes = require("./apiRoutes");
+const pageRoutes = require("./pagesRoutes");
 
+router.use("/", pageRoutes);
 router.use("/api/account", accountRoutes);
-
-router.get("/", async (req, res) => {
-    try{
-    res.render("homepage")
-    } catch(err){
-    res.status(400).json(err)
-    }
-});
+router.use("/api", apiRoutes);
 
 module.exports = router;
