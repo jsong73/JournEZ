@@ -2,6 +2,10 @@ h1{
     text-align: center;
 }
 
+h2{
+    text-align: center;
+}
+
 form{
     text-align: center;
 }
@@ -17,12 +21,6 @@ button{
     width: 200px;
 } */
 
-form{
-    text-align: center;
-}
-
-
 .nav-link{
     color: black;
 }
-

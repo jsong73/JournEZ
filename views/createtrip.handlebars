@@ -8,3 +8,61 @@
     <a class="dropdown-item" href="#">Something else here</a>
   </div>
 </div> --}}
+
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link" href="/createtrip"> Create Trip </a>    
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"> Upcoming Trips </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"> Past Trips </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/signin"> Account </a>
+  </li>
+</ul>
+
+ 
+<h2> CREATE TRIP </h2>
+<br>
+<form>
+
+<h3> FLIGHT </h3>
+
+<div>Which airline will you be taking?</div> 
+<div>What day is your flight?</div>
+
+<div>What time is your flight?</div>
+<div>What is your seat number?</div>
+<div>How much is the cost of your flight?</div>
+<br>
+
+<h3> HOTEL </h3>
+<div>Which hotel will you be staying at?</div>
+<div>What is the check in date?</div>
+<div>What is the check out date?</div>
+<div>What is the reserved room number?</div>
+<div>How much is the room bill?</div>
+<br>
+
+<button id="create-trip-btn"> CREATE TRIP </button>
+<br>
+
+<div class="dropdown show">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Add to trip form </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="/activity">Activity</a>
+    <a class="dropdown-item" href="/restaurant">Restaurant</a>
+    <a class="dropdown-item" href="/transportation">Transportation</a>
+  </div>
+</div>
+
+
+</form>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="/assets/createForm.js"></script>
