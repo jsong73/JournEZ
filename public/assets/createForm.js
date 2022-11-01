@@ -10,3 +10,4 @@ IF(choice === activity) {
 
 SWITCH CASE STATEMENT
 */
+

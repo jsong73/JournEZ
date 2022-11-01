@@ -12,44 +12,55 @@
     <a class="nav-link" href="/signin"> Account </a>
   </li>
 </ul>
+ 
+  <h2> ITENERARY </h2>
+  <br>
+  {{#each trips as |trip| }}
+  <h3>{{trip.trip_name}}</h3>
 
-{{#each trips as |trip| }}
-<div>{{trip.trip_name}}</div>
-
+  Activities:
   {{#each trip.activities as |activity|}}
   <div>{{activity.activity}}</div>
-  <div>{{activity.activity_date}}</div>
-  <div>{{activity.activity_cost}}</div>
+  Date: <div>{{activity.activity_date}}</div>
+  Cost: <div>{{activity.activity_cost}}</div>
   {{/each}}
+  <br>
 
+  Flight:
   {{#each trip.flights as |flight|}}
   <div>{{flight.airline}}</div>
-  <div>{{flight.flight_date}}</div>
-  <div>{{flight.flight_time}}</div>
-  <div>{{flight.seat_number}}</div>
-  <div>{{flight.flight_cost}}</div>
+  Date: <div>{{flight.flight_date}}</div>
+  Flight time: <div>{{flight.flight_time}}</div>
+  Seat number: <div>{{flight.seat_number}}</div>
+  Cost: <div>{{flight.flight_cost}}</div>
   {{/each}}
+  <br>
 
+  Hotel:
   {{#each trip.hotels as |hotel|}}
   <div>{{hotel.hotel}}</div>
-  <div>{{hotel.room_number}}</div>
-  <div>{{hotel.checkin_date}}</div>
-  <div>{{hotel.checkout_date}}</div>
-  <div>{{hotel.room_bill}}</div>
+  Room number: <div>{{hotel.room_number}}</div>
+  Check-in date: <div>{{hotel.checkin_date}}</div>
+  Check-out date: <div>{{hotel.checkout_date}}</div>
+  Room bill: <div>{{hotel.room_bill}}</div>
   {{/each}}
+   <br>
 
+  Restaurant:
   {{#each trip.restaurants as |restaurant|}}
   <div>{{restaurant.restaurant}}</div>
-  <div>{{restaurant.dining_date}}</div>
-  <div>{{restaurant.bill_amount}}</div>
+  Dining date: <div>{{restaurant.dining_date}}</div>
+  Bill amount: <div>{{restaurant.bill_amount}}</div>
   {{/each}}
+   <br>
 
+  Transporation:
   {{#each trip.transportation as |transportation|}}
   <div>{{transportation.transportation}}</div>
-  <div>{{transportation.ride_date}}</div>
-  <div>{{transporation.ride_cost}}</div>
-
-  {{#if transportation.paid_in_full}}
+  Ride date: <div>{{transportation.ride_date}}</div>
+  Ride cost: <div>{{transportation.ride_cost}}</div>
+  
+  paid in full?{{#if transportation.paid_in_full}}
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
       <label class="form-check-label" for="flexCheckChecked">
