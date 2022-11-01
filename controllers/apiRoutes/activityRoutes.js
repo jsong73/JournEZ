@@ -13,14 +13,8 @@ router.post("/", async (req, res) => {
 
 router.get("/", async (req, res) => {    
     try{
-        const activityData = await Activity.findAll({
-            include: [
-                {
-                    model: Activity
-                },
-            ],
-        });
-        const activity = activityData.map((data) => data.get({plain: true }));
+        const activityData = await Activity.findAll();
+        const activity = activityData.map((data) => data.get({ plain: true }));
         res.status(200).json(activity);
         console.log(activity);
     } catch (err) {
