@@ -11,8 +11,7 @@ IF(choice === activity) {
 SWITCH CASE STATEMENT
 */
 
-const createTripHandler = async(event) => {
-    fetch("api/trip")
+// const createTripForm = async(event) => {
+//     event.preventDefault();
 
-
-}
+// }
