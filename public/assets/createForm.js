@@ -15,24 +15,24 @@ const createTripForm = async(event) => {
     event.preventDefault();
 
 const airline = document.getElementById("airline").value.trim();
-const flight_date = document.getElementById("airline").value.trim();
-const flight_time = document.getElementById("airline").value.trim();
-const seat_number = document.getElementById("airline").value.trim();
-const flight_cost = document.getElementById("airline").value.trim();
+const flight_date = document.getElementById("flight-date").value.trim();
+const flight_time = document.getElementById("flight-time").value.trim();
+const seat_number = document.getElementById("seat-number").value.trim();
+const flight_cost = document.getElementById("flight-cost").value.trim();
 
-const hotel = document.getElementById("airline").value.trim();
-const checkin_date = document.getElementById("airline").value.trim();
-const checkout_date = document.getElementById("airline").value.trim();
-const room_number = document.getElementById("airline").value.trim();
-const room_bill = document.getElementById("airline").value.trim();
+const hotel = document.getElementById("hotel").value.trim();
+const checkin_date = document.getElementById("checkin-date").value.trim();
+const checkout_date = document.getElementById("checkout-date").value.trim();
+const room_number = document.getElementById("room-number").value.trim();
+const room_bill = document.getElementById("room-bill").value.trim();
 
-const activity = document.getElementById("airline").value.trim();
-const activity_date = document.getElementById("airline").value.trim();
-const activity_cost = document.getElementById("airline").value.trim();
+const activity = document.getElementById("activity").value.trim();
+const activity_date = document.getElementById("activity-date").value.trim();
+const activity_cost = document.getElementById("activity-cost").value.trim();
 
-const transportation = document.getElementById("airline").value.trim();
-const ride_date = document.getElementById("airline").value.trim();
-const ride_cost = document.getElementById("airline").value.trim();
+const transportation = document.getElementById("transportation").value.trim();
+const ride_date = document.getElementById("ride-date").value.trim();
+const ride_cost = document.getElementById("ride-cost").value.trim();
 
 if(airline, 
     flight_date, 

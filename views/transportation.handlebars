@@ -18,13 +18,28 @@
 <form>
 
 <h3> TRANSPORTATION </h3>
-<div>What transportation will you be taking?</div>
+<div>What transportation will you be taking?</div>  <input type="text" id="transportation">
 <div>What day was this ride?</div>
-<div>How much does the ride cost?</div>
-<div>Would you like to add another form of transportation?</div>
-<br>
+<div class="controls">
+        <input type="date" id="ride-date" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
+        <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;</label>
+      </div>   
+<div>How much does the ride cost?</div> <input type="text" id="ride-cost">
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Would you like to add another transportation?
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Yes</a>
+    <a class="dropdown-item" href="#">No</a>
+  </div>
 
 <button id="add-to-trip-btn"> ADD TO TRIP </button>
 <br>
 
 </form>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="/assets/createForm.js"></script>
