@@ -34,9 +34,10 @@
 <div>Which airline will you be taking?</div> <input type="text" id="airline">
 <div>What day is your flight?</div>
 <div class="controls">
-        <input type="date" id="flight-date" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
+        <input type="date" id="flight-date" class="floatLabel" name="arrive" asp-format="{0:yyyy-MM-dd}" />
         <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;</label>
       </div>    
+      
 <div>What time is your flight?</div> <input type="text" id="flight-time">
 <div>What is your seat number?</div> <input type="text" id="seat-number">
 <div>How much is the cost of your flight?</div> <input type="text" id="flight-cost">
@@ -46,12 +47,12 @@
 <div>Which hotel will you be staying at?</div> <input type="text" id="hotel">
 <div>What is the check in date?</div> 
 <div class="controls">
-        <input type="date" id="checkin-date" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
+        <input type="date" id="checkin-date" class="floatLabel" name="arrive" asp-format="{0:yyyy-MM-dd}" />
         <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;</label>
       </div>      
 <div>What is the check out date?</div>
 <div class="controls">
-        <input type="date" id="checkout-date" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
+        <input type="date" id="checkout-date" class="floatLabel" name="arrive" asp-format="{0:yyyy-MM-dd}" />
         <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;</label>
       </div>    
 <div>What is the reserved room number?</div> <input type="text" id="room-number">
