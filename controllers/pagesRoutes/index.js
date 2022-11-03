@@ -92,4 +92,12 @@ router.get("/restaurant", async (req, res) => {
 });
 
 
+router.get("/account", async (req, res) => {
+  try{
+    res.render("account");
+  } catch (err) {
+    res.status(500).json(err)
+  }
+});
+
 module.exports = router;

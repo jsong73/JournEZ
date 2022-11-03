@@ -9,6 +9,17 @@ const {
   Trip,
 } = require("../../models");
 
+// /api/trips
+router.post("/", async (req, res) => {
+  try{
+      const tripsData = await Trip.create(req.body)
+      res.status(200).json({ msg: "Trip details was successfully created!", tripsData})
+  } catch(err){
+      res.status(400).json(err)
+  }
+});
+
+
 // /api/trips to get ALL the information from ALL users and ALL related trip info
 router.get("/", async (req, res) => {
   try {

@@ -11,6 +11,8 @@ const PORT = process.env.PORT || 3002;
 const controllers = require("./controllers");
 //importing path node library
 const path = require("path");
+//importing bcrypt library
+const bcrypt = require("bcrypt")
 // Import express-handlebars
 const exphbs = require("express-handlebars");
 const hbs = exphbs.create({});

@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { Account } = require("../../models");
-
+const bcrypt = require("bcrypt");
+//api/account
 router.get("/", async (req, res) => {
     try{
         const accountData = await Account.findAll();
@@ -21,6 +22,7 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
     try{
         const accountData = await Account.create(req.body)
+        accountData.password = await bcrypt.hash(req.body.password, 10)
         res.status(200).json({ msg: "Account was successfully created!", accountData})
     } catch(err){
         res.status(400).json(err)
