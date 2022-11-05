@@ -1,4 +1,4 @@
-<ul class="nav justify-content-end">
+<ul class="nav">
   <li class="nav-item">
     <a class="nav-link" href="/createtrip"> Create Trip </a>
   </li>
@@ -9,12 +9,15 @@
     <a class="nav-link" href="#"> Past Trips </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/account"> Account </a>
+    <a class="nav-link" href="/logout"> Log out </a>
   </li>
 </ul>
  
-  <h2> ITENERARY </h2>
+  <h2> Public Wall </h2>
   <br>
+
+  <div class="forum">
+
   {{#each trips as |trip| }}
   <h3>{{trip.trip_name}}</h3>
 
@@ -79,3 +82,4 @@
 
 
 {{/each}}
+</div>

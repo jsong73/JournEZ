@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { Account } = require("../../models");
 const bcrypt = require("bcrypt");
-//api/account
+const e = require("express");
+//api/account/
 router.get("/", async (req, res) => {
     try{
         const accountData = await Account.findAll();
@@ -19,11 +20,13 @@ router.get("/", async (req, res) => {
 //     }
 // });
 
+//api/account
 router.post("/", async (req, res) => {
     try{
         const accountData = await Account.create(req.body)
         accountData.password = await bcrypt.hash(req.body.password, 10)
         res.status(200).json({ msg: "Account was successfully created!", accountData})
+        // })
     } catch(err){
         res.status(400).json(err)
     }
@@ -37,17 +40,27 @@ router.post("/signin", async (req, res) => {
               password: req.body.password,
             },
         });
+
         if(!accountData){
             res.status(400).json({ msg: "No account found! Please check username or password."})
             return;
         }
         res.status(200).json(accountData);
+
     } catch (err) {
         res.status(400).json(err)
     }
    
 });
 
-//if account user name is already taken 
+router.post("/logout", (req, res) => {
+try{
+    res.status(200).end();
+} catch (err) {
+    res.status(400).json(err)
+}});
+
+
+
 
 module.exports = router;

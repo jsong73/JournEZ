@@ -91,10 +91,9 @@ router.get("/restaurant", async (req, res) => {
   }
 });
 
-
-router.get("/account", async (req, res) => {
+router.get("/logout", async (req, res) => {
   try{
-    res.render("account");
+    res.render("logout");
   } catch (err) {
     res.status(500).json(err)
   }

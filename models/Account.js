@@ -42,7 +42,7 @@ Account.init(
         allowNull: true,
     },
 },
-    {
+{
         sequelize,
         timestamps: false,
         freezeTableName: true,
