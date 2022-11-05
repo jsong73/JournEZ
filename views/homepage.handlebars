@@ -18,8 +18,13 @@
 
   <div class="forum">
 
+
   {{#each trips as |trip| }}
   <h3>{{trip.trip_name}}</h3>
+
+  {{#each trip as |account| }}
+  <h3>{{account.username}}</h3> 
+  {{/each}}
 
   Activities:
   {{#each trip.activities as |activity|}}

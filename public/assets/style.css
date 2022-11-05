@@ -41,3 +41,6 @@ div{
  float: right;
 }
 
+.forum{
+ display: flexbox;
+}
