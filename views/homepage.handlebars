@@ -15,26 +15,27 @@
  
   <h2> Public Wall </h2>
   <br>
-
-<div class="forum">
+{{!-- 
+<div class="forum"> --}}
+  <div class="forum">
 <p>
   {{#each trips as |trip| }}
 </p>
   <h2>{{trip.trip_name}}</h2>
 
-  {{#each trip as |account| }}
+{{#each trip as |account| }}
+<h3>{{account.username}}</h3> 
+{{/each}}
 
-  <h3>{{account.username}}</h3> 
-  {{/each}}
-
+<div>
   Activities:
   {{#each trip.activities as |activity|}}
  {{activity.activity}}
   Date: {{activity.activity_date}}
   Cost: {{activity.activity_cost}}
   {{/each}}
-  <br>
-
+</div>
+<div>
   Flight:
   {{#each trip.flights as |flight|}}
   {{flight.airline}}
@@ -43,8 +44,8 @@
   Seat number: {{flight.seat_number}}
   Cost: {{flight.flight_cost}}
   {{/each}}
-  <br>
-
+</div>
+<div>
   Hotel:
   {{#each trip.hotels as |hotel|}}
   {{hotel.hotel}}
@@ -53,23 +54,23 @@
   Check-out date: {{hotel.checkout_date}}
   Room bill: {{hotel.room_bill}}
   {{/each}}
-   <br>
-
+</div>
+<div>
   Restaurant:
   {{#each trip.restaurants as |restaurant|}}
   {{restaurant.restaurant}}
   Dining date: {{restaurant.dining_date}}
   Bill amount: {{restaurant.bill_amount}}
   {{/each}}
-   <br>
-
+</div>
+<div>
   Transporation:
   {{#each trip.transportation as |transportation|}}
   {{transportation.transportation}}
   Ride date: {{transportation.ride_date}}
   Ride cost: {{transportation.ride_cost}}
   {{/each}}
-  <br>
-  <br>
+  </div>
+
 {{/each}}
   </div>
