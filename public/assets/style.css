@@ -1,6 +1,7 @@
 h1{
     text-align: center;
     font-family: 'Inter', sans-serif;
+    font-size: 30px;
     
 }
 
@@ -52,7 +53,6 @@ p{
     background-color: #fff;
     border: 1px solid #e5e5ea;
     border-radius: 0.25rem;
-    /* display: flex; */
     flex-direction: column;
     font-family: 'Inter', sans-serif;
     font-size: small;
@@ -60,4 +60,4 @@ p{
     max-width: 1000px;
     padding: 0.5rem 1.5rem;
   }
-  
+
