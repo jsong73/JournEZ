@@ -200,3 +200,161 @@ body{
     margin-bottom: 10px;
 }
 
+#activity{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#activity-date{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#activity-cost{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#transportation{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#ride-date{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#ride-cost{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+
+.text-center{
+	color:#fff;	
+    font-size: 30px;
+    font-weight:600;
+    margin: -50px 0 80px 0;
+    display: block;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.box{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+    background-color: rgb(2, 125, 255);
+    opacity: .7;
+	border-radius:10px;
+	padding:70px 100px;
+    font-family: 'Inter', sans-serif;
+}
+.input-container{
+	position:relative;
+	margin-bottom:25px;
+    font-family: 'Inter', sans-serif;
+}
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#fff;	
+	transition: all 0.5s ease-in-out;
+
+}
+.input-container input{ 
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+  font-family: 'Inter', sans-serif;
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #f7f7f8;	
+}
+
+#signinbtn{
+	background-color:#f7f7f8;
+	outline: none;
+    border: 0;
+    color: rgb(0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+	padding:10px 20px;
+	margin-top:50px;
+	border-radius:5px;
+	cursor:pointer;
+	position:relative;
+}
+
+#signupbtn{
+	background-color:#f7f7f8;
+	outline: none;
+    border: 0;
+    color: rgb(0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+	padding:10px 20px;
+	margin-top:50px;
+	border-radius:5px;
+	cursor:pointer;
+	position:relative;
+}
+

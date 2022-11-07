@@ -17,6 +17,7 @@
 <form>
 
 <h2> Activities </h2>
+
 <div>What is the name of the activity?</div> <input type="text" id="activity">
 <div>What is the activity date?</div>
 <div class="controls">
@@ -26,7 +27,7 @@
 <div>How much does the activity cost?</div> <input type="text" id="activity-cost">
 
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 Would you like to add another activity?
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -36,7 +37,10 @@ Would you like to add another activity?
 
 <br>
 <br>
-<button id="add-to-trip-btn"> ADD TO TRIP </button>
+
+<div class="d-grid gap-2 d-md-block">
+  <button class="btn btn-primary" id="add-to-trip-btn" type="button"> Add to trip </button>
+</div>
 <br>
 
 </form>
