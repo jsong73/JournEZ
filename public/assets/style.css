@@ -36,6 +36,7 @@ div{
 .nav{
     margin-top: 0%;
     float: right;
+
 }
 
 .background{
@@ -352,10 +353,14 @@ img{
     font-family: 'Inter', sans-serif;
     font-weight: 600;
 	padding:10px 20px;
-	margin-top:30px;
+	margin-top:20px;
+    margin-bottom: 20px;
 	border-radius:5px;
 	cursor:pointer;
 	position:relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
 #signupbtn{
@@ -374,23 +379,23 @@ img{
 
 #signin-box{
 top: 355px;
-
-}
-
-#signup-box{
- 
 }
 
 #logoutbtn{
 margin-top: 50px;
 }
 
-.loginbtn{
-left: 70px;
+@media (max-width: 2000px){
+button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
-
-@media (min-width: 400px){
-
+/* img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
 
 
 }
