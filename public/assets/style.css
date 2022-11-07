@@ -22,42 +22,181 @@ form{
     text-align: center;
 }
 
-button{
-    margin: 0 auto;
-    display: block;
-    border: none;
-    background-color: white;
-    font-family: 'Inter', sans-serif;
-}
-
 div{
     font-family: 'Inter', sans-serif;
+    font-size: 15px;
 }
-
 
 .nav-link{
     color: black;
     font-family: 'Inter', sans-serif;
 }
 
+
 .nav{
- margin-top: 0%;
- float: right;
+    margin-top: 0%;
+    float: right;
 }
 
-p{
-    border: 1px solid lightgray;
+.background{
+    background-color: #f7f7f8;
+}
+
+body{
+    background-color: #f7f7f8;
 }
 
 .forum {
     background-color: #fff;
     border: 1px solid #e5e5ea;
-    border-radius: 0.25rem;
+    border-radius: 30px;
     flex-direction: column;
     font-family: 'Inter', sans-serif;
     font-size: small;
     margin: 0 auto 1rem;
     max-width: 1000px;
     padding: 0.5rem 1.5rem;
-  }
+}
+
+#trip-name{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#airline{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#flight-date{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#flight-time{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#seat-number{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#flight-cost{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#hotel{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#checkin-date{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+}
+
+#checkout-date{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#room-number{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#room-bill{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
 

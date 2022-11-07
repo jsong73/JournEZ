@@ -1,4 +1,3 @@
-
 <ul class="nav">
   <li class="nav-item">
     <a class="nav-link" href="/createtrip"> Create Trip </a>    
@@ -14,12 +13,13 @@
   </li>
 </ul>
 
+<form class="createform">
  
 <h1> Create a Trip </h1>
 <br>
-<form class="createform">
 <h2> Trip Name </h2> <input type="text" class="text" id="trip-name">
-<br><br>
+
+
 <h2> Flight </h2>
 <div>Which airline will you be taking?</div> <input type="text" class="text" id="airline">
 <div>What day is your flight?</div>
@@ -31,7 +31,6 @@
 <div>What time is your flight?</div> <input type="text" id="flight-time">
 <div>What is your seat number?</div> <input type="text" id="seat-number">
 <div>How much is the cost of your flight?</div> <input type="text" id="flight-cost">
-<br>
 
 <h2> Hotel </h2>
 <div>Which hotel will you be staying at?</div> <input type="text" id="hotel">
@@ -49,10 +48,13 @@
 <div>How much is the room bill?</div> <input type="text" id="room-bill">
 <br>
 <br>
-<button id="create-trip-btn"> Create Trip </button>
+
+<div class="d-grid gap-2 d-md-block">
+  <button class="btn btn-primary" id="create-trip-btn" type="button"> Create Trip </button>
+</div>
 <br>
 <div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Add to trip form </a>
+  <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Add to trip form </a>
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <a class="dropdown-item" href="/activity">Activity</a>

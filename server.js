@@ -17,6 +17,7 @@ const bcrypt = require("bcrypt");
 const session = require("express-session");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
+
 // Import express-handlebars
 const exphbs = require("express-handlebars");
 const hbs = exphbs.create({});
