@@ -7,7 +7,6 @@ const hotelRoutes = require("./hotelRoutes");
 const restaurantRoutes = require("./restaurantRoutes");
 const transportationRoutes = require("./transportationRoutes")
 
-
 router.use("/account", accountRoutes);
 router.use("/trips", tripRoutes);
 router.use("/activity", activityRoutes);

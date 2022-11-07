@@ -7,6 +7,7 @@ h1{
 
 h2{
     text-align: center;
+    font-weight: 600;
     font-family: 'Inter', sans-serif;
     font-size: 20px;
 }
@@ -32,7 +33,6 @@ div{
     font-family: 'Inter', sans-serif;
 }
 
-
 .nav{
     margin-top: 0%;
     float: right;
@@ -44,6 +44,20 @@ div{
 
 body{
     background-color: #f7f7f8;
+}
+
+.header{
+    font-weight: 600;
+    text-align: center;
+    font-size: 30px;
+}
+
+img{
+    width: 200px;
+    margin-left: 862px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
 }
 
 .forum {
@@ -283,7 +297,7 @@ body{
 	color:#fff;	
     font-size: 30px;
     font-weight:600;
-    margin: -50px 0 80px 0;
+    margin-bottom: 15px;
     display: block;
     text-align: center;
     font-family: 'Inter', sans-serif;
@@ -292,17 +306,17 @@ body{
 .box{
 	position:absolute;
 	left:50%;
-	top:50%;
+	top:58%;
 	transform: translate(-50%,-50%);
     background-color: rgb(2, 125, 255);
     opacity: .7;
 	border-radius:10px;
-	padding:70px 100px;
+	padding:10px 100px;
     font-family: 'Inter', sans-serif;
 }
 .input-container{
 	position:relative;
-	margin-bottom:25px;
+	margin-bottom:15px;
     font-family: 'Inter', sans-serif;
 }
 .input-container label{
@@ -338,7 +352,7 @@ body{
     font-family: 'Inter', sans-serif;
     font-weight: 600;
 	padding:10px 20px;
-	margin-top:50px;
+	margin-top:30px;
 	border-radius:5px;
 	cursor:pointer;
 	position:relative;
@@ -352,9 +366,31 @@ body{
     font-family: 'Inter', sans-serif;
     font-weight: 600;
 	padding:10px 20px;
-	margin-top:50px;
+	margin-top:20px;
 	border-radius:5px;
 	cursor:pointer;
 	position:relative;
 }
 
+#signin-box{
+top: 355px;
+
+}
+
+#signup-box{
+ 
+}
+
+#logoutbtn{
+margin-top: 50px;
+}
+
+.loginbtn{
+left: 70px;
+}
+
+@media (min-width: 400px){
+
+
+
+}
