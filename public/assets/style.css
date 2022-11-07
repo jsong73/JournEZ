@@ -293,7 +293,44 @@ img{
     margin-bottom: 10px;
 }
 
+#restaurant{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
 
+#arrive{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#restaurant-cost{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color:white;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
 .text-center{
 	color:#fff;	
     font-size: 30px;
