@@ -1,4 +1,4 @@
-fetch("/api/account")
+ fetch("/api/account")
 .then((res) => {
     return res.json();
 })

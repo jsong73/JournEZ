@@ -1,32 +1,17 @@
 const router = require("express").Router();
 const { Account } = require("../../models");
 const bcrypt = require("bcrypt");
-const e = require("express");
-//api/account/
-router.get("/", async (req, res) => {
-    try{
-        const accountData = await Account.findAll();
-        console.log(accountData);
-        res.status(200).json(accountData)
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-        //         const serializedData = accountData.map((account) => account.get({ plain: true}));
-//         console.log(serializedData)
-//         res.render("signup", {serializedData})
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// });
-
+   
 //api/account
 router.post("/", async (req, res) => {
     try{
         const accountData = await Account.create(req.body)
         accountData.password = await bcrypt.hash(req.body.password, 10)
-        res.status(200).json({ msg: "Account was successfully created!", accountData})
-        // })
+
+        // req,session.save(() =>{
+        //     req.session.loggedIn = true;
+            res.status(200).json({ msg: "Account was successfully created!", accountData})  
+        // });
     } catch(err){
         res.status(400).json(err)
     }
@@ -37,18 +22,36 @@ router.post("/signin", async (req, res) => {
         const accountData = await Account.findOne({
             where:{
               username: req.body.username,  
-              password: req.body.password,
+            //   password: req.body.password,
             },
         });
 
         if(!accountData){
-            res.status(400).json({ msg: "No account found! Please check username or password."})
+            res
+            .status(400)
+            .json({ msg: "No account found! Please check username or password."});
             return;
         }
-        res.status(200).json(accountData);
+        
+        const validPassword = await accountData.checkPassword(req.body.password);
 
+        if(!validPassword){
+            res
+            .status(400)
+            .json({ msg: "No account found! Please check username or password." });
+            return;
+        }
+
+        req.session.save(() =>{
+            req.session.loggedIn = true;
+            
+            res
+            .status
+            .json({ msg: "You are now logged in!", accountData })
+        });
+        res.status(200).json(accountData);
     } catch (err) {
-        res.status(400).json(err)
+        res.status(500).json(err)
     }
    
 });
@@ -59,8 +62,6 @@ try{
 } catch (err) {
     res.status(400).json(err)
 }});
-
-
 
 
 module.exports = router;
