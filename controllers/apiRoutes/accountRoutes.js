@@ -27,16 +27,14 @@ router.post("/signin", async (req, res) => {
         //   password: req.body.password,
       },
     });
-    console.log(accountData);
     if (!accountData) {
       res
         .status(400)
         .json({ msg: "No account found! Please check username or password." });
       return;
     }
-    console.log("pw", req.body.password);
     const validPassword = await accountData.checkPassword(req.body.password);
-    console.log("does it return boolean", validPassword);
+
     if (!validPassword) {
       res
         .status(400)
