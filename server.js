@@ -17,7 +17,6 @@ const bcrypt = require("bcrypt");
 const session = require("express-session");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
-
 // Import express-handlebars
 const exphbs = require("express-handlebars");
 const hbs = exphbs.create({});
@@ -29,10 +28,8 @@ app.set("view engine", "handlebars");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(controllers);
-
 const sess = {
-  secret:"Super secret secret",
+  secret: "Super secret secret",
   cookie: {
     maxAge: 300000,
     httpOnly: true,
@@ -42,15 +39,16 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
-app.use(session(sess))
+app.use(session(sess));
 
 //connecting public folder, front end to server
 app.use(express.static(path.join(__dirname, "public")));
 
+app.use(controllers);
 
 //to connect to port using express
 sequelize.sync({ force: false }).then(() => {
