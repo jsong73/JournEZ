@@ -24,7 +24,6 @@ router.post("/signin", async (req, res) => {
     const accountData = await Account.findOne({
       where: {
         username: req.body.username,
-        //   password: req.body.password,
       },
     });
     if (!accountData) {
