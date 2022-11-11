@@ -9,7 +9,7 @@ const {
   Trip,
 } = require("../../models");
 
-router.get("/", async (req, res) => {
+router.get("/homepage", async (req, res) => {
   try {
     const tripsData = await Trip.findAll({
       include: [
@@ -42,7 +42,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/signup", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     res.render("signup");
   } catch (err) {

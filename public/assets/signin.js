@@ -12,7 +12,7 @@ const signinFormHandler = async(event) => {
         });
 
         if(response.ok){
-            document.location.replace("/")
+            document.location.replace("/homepage")
         } else {
            alert("No account found! Please check username or password.") 
         }
