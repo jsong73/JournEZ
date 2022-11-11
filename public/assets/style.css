@@ -52,16 +52,6 @@ body{
     text-align: center;
     font-size: 25px;
 }
-/* 
-.form-outline{
-    width: 1000px;
-    border: 5px double rgba(105, 105, 105, 0.671);
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-   
-} */
 
 #dropdownMenuLink{
     margin-bottom: 20px;
@@ -450,10 +440,6 @@ img{
 
 #signin-box{
 top: 355px;
-}
-
-#logoutbtn{
-margin-top: 50px;
 }
 
 

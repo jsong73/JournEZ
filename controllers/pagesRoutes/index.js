@@ -36,7 +36,9 @@ router.get("/homepage", async (req, res) => {
     });
     const trips = tripsData.map((data) => data.get({ plain: true }));
     console.log(trips);
-    res.render('homepage', {trips})
+    res.render('homepage', {
+      trips, 
+      loggedIn: req.session.loggedIn});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -98,5 +100,6 @@ router.get("/logout", async (req, res) => {
     res.status(500).json(err)
   }
 });
+
 
 module.exports = router;
