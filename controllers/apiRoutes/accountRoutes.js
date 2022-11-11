@@ -51,10 +51,12 @@ router.post("/signin", async (req, res) => {
 });
 
 router.post("/logout", (req, res) => {
-  try {
-    res.status(200).end();
-  } catch (err) {
-    res.status(400).json(err);
+  if (req.session.loggedIn = true){
+    req.session.destroy(() => {
+      res.status(200).end();
+    });
+  } else {
+    res.status(400).end();
   }
 });
 

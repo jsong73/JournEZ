@@ -4,7 +4,6 @@ const createTripForm = async(event) => {
 const activity = document.getElementById("activity").value.trim();
 const activity_date = document.getElementById("activity-date").value.trim();
 const activity_cost = document.getElementById("activity-cost").value.trim();
-
         if( activity,
             activity_date,
             activity_cost
@@ -22,8 +21,10 @@ const activity_cost = document.getElementById("activity-cost").value.trim();
                 document.location.replace("/")
             } else {
                 alert(response.statusText);
-            }}}
-            
+    
+}}}
+
+
 
 document
     .getElementById("add-to-trip-btn")
