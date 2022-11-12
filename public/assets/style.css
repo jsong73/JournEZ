@@ -442,6 +442,9 @@ img{
 top: 355px;
 }
 
+#logoutbtn{
+    cursor: pointer;
+}
 
 @media (max-width: 2000px){
 button{

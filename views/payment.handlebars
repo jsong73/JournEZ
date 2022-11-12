@@ -1,0 +1,73 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" href="/homepage"> Home </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/createtrip"> Create Trip </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/payment"> Trip Payments </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="logoutbtn"> Log out </a>
+  </li>
+</ul>
+
+
+<div class="background">
+  <div class="header"> Trip cost </div>
+  <br>
+
+  <div class="forum">
+<p>
+  {{#each trips as |trip| }}
+</p>
+  <h2>{{trip.trip_name}}</h2>
+{{!-- 
+{{#each trip as |account| }} --}}
+<h3>{{account.user_id}}</h3> 
+{{!-- {{/each}} --}}
+
+<div>
+  Activities:
+{{#each trip.activities as |activity|}}
+{{activity.activity}}
+{{activity.activity_cost}}
+{{/each}}
+</div>
+
+<div>
+  Flight:
+{{#each trip.flights as |flight|}}
+{{flight.airline}}
+{{flight.flight_cost}}
+{{/each}}
+</div>
+
+<div>
+  Hotel:
+{{#each trip.hotels as |hotel|}}
+{{hotel.hotel}}
+{{hotel.room_bill}}
+{{/each}}
+</div>
+
+<div>
+  Restaurant:
+{{#each trip.restaurants as |restaurant|}}
+{{restaurant.restaurant}}
+{{restaurant.bill_amount}}
+{{/each}}
+</div>
+
+<div>
+  Transporation:
+{{#each trip.transportation as |transportation|}}
+{{transportation.transportation}}
+{{transportation.ride_cost}}
+{{/each}}
+</div>
+
+{{/each}}
+  </div>
+  </div>

@@ -6,9 +6,13 @@
     <a class="nav-link" href="/createtrip"> Create Trip </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="logoutbtn" href="/"> Log out </a>
+    <a class="nav-link" href="/payment"> Trip Payments </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="logoutbtn"> Log out </a>
   </li>
 </ul>
+
 
 <div class="background">
   <div class="header"> Public Wall </div>
@@ -32,6 +36,7 @@
   Cost: {{activity.activity_cost}}
   {{/each}}
 </div>
+
 <div>
   Flight:
   {{#each trip.flights as |flight|}}
@@ -42,6 +47,7 @@
   Cost: {{flight.flight_cost}}
   {{/each}}
 </div>
+
 <div>
   Hotel:
   {{#each trip.hotels as |hotel|}}
@@ -52,6 +58,7 @@
   Room bill: {{hotel.room_bill}}
   {{/each}}
 </div>
+
 <div>
   Restaurant:
   {{#each trip.restaurants as |restaurant|}}
@@ -60,6 +67,7 @@
   Bill amount: {{restaurant.bill_amount}}
   {{/each}}
 </div>
+
 <div>
   Transporation:
   {{#each trip.transportation as |transportation|}}
@@ -67,7 +75,7 @@
   Ride date: {{transportation.ride_date}}
   Ride cost: {{transportation.ride_cost}}
   {{/each}}
-  </div>
+</div>
 
 {{/each}}
   </div>

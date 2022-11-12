@@ -101,5 +101,41 @@ router.get("/logout", async (req, res) => {
   }
 });
 
+router.get("/payment", async (req, res) => {
+  try {
+    const tripsData = await Trip.findAll({
+      include: [
+        {
+          model: Account,
+          attributes: { exclude: "password" },
+        },
+        {
+          model: Activity,
+        },
+        {
+          model: Flight,
+        },
+        {
+          model: Hotel,
+        },
+        {
+          model: Restaurant,
+        },
+        {
+          model: Transportation,
+        },
+      ],
+    });
+    const trips = tripsData.map((data) => data.get({ plain: true }));
+    console.log(trips);
+    res.render('payment', {
+      trips, 
+      loggedIn: req.session.loggedIn});
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 
 module.exports = router;

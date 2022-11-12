@@ -49,7 +49,6 @@ router.get("/", async (req, res) => {
     const trips = tripsData.map((data) => data.get({ plain: true }));
     res.status(200).json(trips);
     console.log(trips);
-    // res.render('homepage', {trips})
   } catch (err) {
     res.status(500).json(err);
   }
