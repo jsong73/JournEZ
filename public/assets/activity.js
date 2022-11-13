@@ -18,7 +18,7 @@ const activity_cost = document.getElementById("activity-cost").value.trim();
             
             if(response.ok){
                 // If successful, redirect the browser to the profile page
-                document.location.replace("/")
+                document.location.replace("/homepage")
             } else {
                 alert(response.statusText);
     

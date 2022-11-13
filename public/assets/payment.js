@@ -5,3 +5,5 @@ fetch("/api/trips/:user_id")
 .then((data) => {
     console.log(data)
 })
+
+

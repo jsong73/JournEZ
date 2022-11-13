@@ -17,7 +17,7 @@ if(first_name, last_name, email, username, password) {
 
 if(response.ok){
     // If successful, redirect the browser to the profile page
-    document.location.replace("/")
+    document.location.replace("/signin")
 } else {
     alert(response.statusText);
 }
