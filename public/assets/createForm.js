@@ -5,7 +5,7 @@ const trip_name = document.getElementById("trip-name").value.trim();
 
 const airline = document.getElementById("airline").value.trim();
 const flight_date = document.getElementById("flight-date").value.trim();
-const flight_time = document.getElementById("flight-time").value.trim();
+const flight_time = document.getElementById("flight-time").value;
 const seat_number = document.getElementById("seat-number").value.trim();
 const flight_cost = document.getElementById("flight-cost").value.trim();
 
@@ -14,6 +14,7 @@ const checkin_date = document.getElementById("checkin-date").value.trim();
 const checkout_date = document.getElementById("checkout-date").value.trim();
 const room_number = document.getElementById("room-number").value.trim();
 const room_bill = document.getElementById("room-bill").value.trim();
+
 
 if(trip_name) 
     {
@@ -33,8 +34,9 @@ if(airline,
     const response = await fetch("/api/flight", {
        method: "POST",
        body: JSON.stringify({ airline, flight_date, flight_time, seat_number, flight_cost}),
-       headers: { "Content-Type": "application/json" },
+       headers: { "Content-Type": "application/json" },     
     });
+    }
 
     if( hotel,
         checkin_date,
@@ -56,8 +58,10 @@ if(airline,
                     alert(response.statusText);
                 }}}
             }
-        }
-    
+
+
+
+
 document
     .getElementById("create-trip-btn")
     .addEventListener("click", createTripForm);
