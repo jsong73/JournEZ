@@ -15,7 +15,6 @@ const checkout_date = document.getElementById("checkout-date").value.trim();
 const room_number = document.getElementById("room-number").value.trim();
 const room_bill = document.getElementById("room-bill").value.trim();
 
-
 if(trip_name) 
     {
     const response = await fetch("/api/trips", {
@@ -34,8 +33,10 @@ if(airline,
     const response = await fetch("/api/flight", {
        method: "POST",
        body: JSON.stringify({ airline, flight_date, flight_time, seat_number, flight_cost}),
-       headers: { "Content-Type": "application/json" },     
+       headers: { "Content-Type": "application/json" },
+      
     });
+
     }
 
     if( hotel,
@@ -58,9 +59,6 @@ if(airline,
                     alert(response.statusText);
                 }}}
             }
-
-
-
 
 document
     .getElementById("create-trip-btn")
