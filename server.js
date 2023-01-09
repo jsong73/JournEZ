@@ -5,7 +5,7 @@ const app = express();
 const sequelize = require("./config/connection");
 //importing the models folder
 const Model = require("./models");
-//connect to the available port if not specified use port 3000
+//connect to the available port if not specified use port 3002
 const PORT = process.env.PORT || 3002;
 //importing controllers folder
 const controllers = require("./controllers");
@@ -20,14 +20,12 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 // Import express-handlebars
 const exphbs = require("express-handlebars");
 const hbs = exphbs.create({});
+
 // The following two lines of code are setting Handlebars.js as the default template engine.
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 //if using POST request you need to use these two lines of code
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
 const sess = {
   secret: "Super secret secret",
   cookie: {
@@ -49,6 +47,16 @@ app.use(session(sess));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(controllers);
+
+//add below two lines for deployment
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
 
 //to connect to port using express
 sequelize.sync({ force: false }).then(() => {

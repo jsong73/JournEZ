@@ -13,7 +13,7 @@ const {
 router.post("/", async (req, res) => {
   try{
       const tripsData = await Trip.create(req.body)
-      res.status(200).json({ msg: "Trip details was successfully created!", tripsData})
+      res.status(200).json({ msg: "Trip details were successfully created!", tripsData})
   } catch(err){
       res.status(400).json(err)
   }
