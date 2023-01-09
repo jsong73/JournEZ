@@ -48,16 +48,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(controllers);
 
-//add below two lines for deployment
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
-}
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
-
-
 //to connect to port using express
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, (err) => console.log(`listening to port ${PORT}`));
